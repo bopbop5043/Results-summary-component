@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: Hanken;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: Hanken;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    background: #FFF;
+    box-shadow: 15px 15px 35px 0px rgba(47, 40, 175, 0.10);
+
+    .result{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #6643FF 0%, #352BEC 100%);
+        border-radius: 2em;
+        padding: 2.5em 3.25em;
+        color: white;
+    
+        & h3{
+            font-size: 1.25em;
+            font-weight: 500;
+            color: #ffffffbf;
+        }
+    
+        & .totalscore{
+            margin: 2.25em 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 11em;
+            height: 11em;
+            border-radius: 50em;
+            background: linear-gradient(180deg, #4F24CC 0%, #4636F1 100%);
+    
+            & h1{
+                font-size: 4em;
+            }
+    
+            & p{
+                font-weight: 400;
+                color: #ffffff80;
+            }
+        }
+    
+        & .textarea{
+            max-width: 14em;
+    
+            & h2{
+                font-weight: 500;
+                font-size: 1.75em;
+                text-align: center;
+                padding-bottom: .5em;
+            }
+    
+            & p{
+                text-align: center;
+                color: #ffffffbf;
+            }
+        }
+    }
+
+    & .summary{
+        padding: 2em;
+
+        & h3{
+            font-size: 1.25em;
+            font-weight: 500;
+            color: #1D2333;
+        }
+
+        & .name-wrap{
+            display: flex;
+            gap: .5em;
+        }
+
+
+        & ul{
+            margin: 2em 0;
+             
+            & li{
+                display: flex;
+                justify-content: space-between;
+                margin-top: .75em;
+                gap: 5em;
+                padding: 1em .75em;
+                border-radius: .5em;
+                color: #1D233380;
+        
+                & span{
+                    color: #1D2333;
+                }
+            }
+
+            & #reaction{
+                background-color: #F55f551A;
+                & .type{
+                    color: #F55f55;
+                }
+            }
+            & #memory{
+                background-color: #FFB21E1A;
+                & .type{
+                    color: #FFB21E;
+                }
+            }
+            & #verbal{
+                background-color: #00BB8F1A;
+                & .type{
+                    color: #00BB8F;
+                }
+            }
+            & #visual{
+                background-color: #1125D61A;
+                & .type{
+                    color: #1125D6;
+                }
+            }
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            border-radius: 50em;
+            background: #303B59;
+            color: white;
+            text-decoration: none;
+            transition: 200ms all ease-out;
+        }
+
+        .button:hover{
+            background: #352BEC;
+            transition: 200ms all ease-out;
+        }
+        .button:active{
+            outline: #1D2333 solid 1.5px;
+            outline-offset: -2px;
+            transition: 100ms all ease-out;
+        }
+    }
+}
